@@ -1,0 +1,13 @@
+@import './variables.css';
+
+/* Global utilities if needed */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-sm);
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+}

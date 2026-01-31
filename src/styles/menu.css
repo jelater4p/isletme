@@ -1,0 +1,197 @@
+/* Menu Specific Styles - Light/Cafe Theme */
+
+/* Import Google Font for that "Modern Cafe" look */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700&display=swap');
+
+.menu-page {
+    padding-bottom: 100px;
+    max-width: 600px;
+    /* Limit width on desktop for mobile feel */
+    margin: 0 auto;
+}
+
+/* Header with inviting gradient or clean look */
+.menu-page header {
+    text-align: center;
+    margin-bottom: var(--spacing-sm);
+}
+
+.menu-page h1 {
+    font-size: 2.2rem;
+    background: linear-gradient(135deg, var(--primary-color), #ff9800);
+    -webkit-background-clip: text;
+    background-clip: text;
+    /* Fix lint */
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 0.2rem;
+    letter-spacing: -0.5px;
+}
+
+/* Sticky Category Navigation - Pill Style */
+.category-nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(248, 249, 250, 0.95);
+    /* Matches bg-color */
+    backdrop-filter: blur(8px);
+    padding: 1rem var(--spacing-sm);
+    display: flex;
+    gap: 0.8rem;
+    overflow-x: auto;
+    white-space: nowrap;
+    /* Hide scrollbar */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    margin-left: -1rem;
+    /* Full bleed hack */
+    margin-right: -1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    box-shadow: 0 4px 20px -10px rgba(0, 0, 0, 0.1);
+}
+
+.category-nav::-webkit-scrollbar {
+    display: none;
+}
+
+.category-btn {
+    background: white;
+    color: var(--text-secondary);
+    border: 1px solid var(--card-border);
+    padding: 0.6rem 1.2rem;
+    border-radius: 50px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: color 0.3s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
+    position: relative;
+    /* For indicator */
+}
+
+.category-btn.active {
+    color: white;
+    border-color: transparent;
+    background: transparent;
+    /* BG handled by indicator */
+    box-shadow: none;
+}
+
+.active-indicator {
+    position: absolute;
+    inset: 0;
+    background: var(--primary-color);
+    border-radius: 50px;
+    z-index: -1;
+    box-shadow: 0 4px 12px rgba(230, 81, 0, 0.3);
+}
+
+.menu-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0 var(--spacing-xs);
+}
+
+/* Menu Card - Physical Card Look */
+.menu-card {
+    background: var(--card-bg);
+    border-radius: var(--radius-md);
+    padding: 0;
+    /* Remove padding for image bleed if wanted, or keep it */
+    display: flex;
+    box-shadow: var(--card-shadow);
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    transition: box-shadow 0.2s;
+    overflow: hidden;
+    /* For image corners */
+    height: 120px;
+    /* Fixed height for consistency */
+    position: relative;
+}
+
+.menu-card:active {
+    transform: scale(0.98);
+}
+
+.card-media {
+    width: 120px;
+    min-width: 120px;
+    height: 100%;
+}
+
+.card-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-content {
+    flex: 1;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.product-info h3 {
+    font-size: 1.15rem;
+    margin-bottom: 0.2rem;
+    /* reduced */
+    color: var(--text-color);
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.product-info .price {
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 1.1rem;
+    /* Remove old box style for cleaner look next to image */
+    background: transparent;
+    padding: 0;
+}
+
+/* Stock Status styling update */
+.status-area {
+    align-self: flex-start;
+    /* Align tag to left */
+}
+
+.stock-status {
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 50px;
+    /* Pill shape */
+}
+
+.stock-out {
+    color: #d32f2f;
+    background: #ffebee;
+    border: 1px solid #ffcdd2;
+}
+
+/* Stock available pill */
+.stock-available {
+    color: var(--text-secondary);
+    background: #f1f3f5;
+    border: none;
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

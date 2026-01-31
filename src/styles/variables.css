@@ -1,0 +1,72 @@
+:root {
+  /* Colors - Cafe/Okey Concept (Light & Warm) */
+  --bg-color: #f8f9fa;
+  /* Soft light gray/white */
+  --bg-secondary: #ffffff;
+
+  --text-color: #2c2c2c;
+  /* Softer black */
+  --text-secondary: #666666;
+
+  --primary-color: #e65100;
+  /* Warm Orange/Terracotta - Appetizing and energetic */
+  --primary-hover: #bf360c;
+
+  /* Cards */
+  --card-bg: #ffffff;
+  --card-border: rgba(0, 0, 0, 0.08);
+  --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+
+  /* Status */
+  --success-color: #2e7d32;
+  --error-color: #d32f2f;
+  --warning-color: #ed6c02;
+
+  /* Typography */
+  --font-main: 'Outfit', 'Inter', system-ui, sans-serif;
+  /* Modern, friendly font */
+
+  /* Spacing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+
+  /* Radius */
+  --radius-md: 16px;
+  /* More rounded for mobile friendliness */
+  --radius-lg: 24px;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font-main);
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Reset basics */
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  /* Removes blue highlight on mobile tap */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: 700;
+  color: var(--text-color);
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+}
